@@ -1,25 +1,16 @@
-class Bank_Account:
-    def __init__(self):
-        self.balance=0
-        print("Welcome to the Deposit & Withdrawal Machine")
-    def display(self):
-        print("\n Available Balance=",self.balance)
-class Deposit(Bank_Account): 
-    def deposit(self):
-        amount=float(input("Enter amount to be Deposited: "))
-        self.balance += amount
-        print("\n Amount Deposited:",amount)
-class Withdraw(Bank_Account):   
-    def withdraw(self):
-        amount = float(input("Enter amount to be Withdrawn: "))
-        if self.balance>=amount:
-            self.balance-=amount
-            print("\n Withdrew:", amount)
-        else:
-            print("\n Insufficient balance  ")
-s = Bank_Account()
-p=Deposit()
-p.deposit()
-q=Withdraw()
-q.withdraw()
-s.display()
+class Bank:  
+    def getroi(self):  
+        return 10;  
+class SBI(Bank):  
+    def getroi(self):  
+        return 7;  
+  
+class ICICI(Bank):  
+    def getroi(self):  
+        return 8;  
+b1 = Bank()  
+b2 = SBI()  
+b3 = ICICI()  
+print("Bank Rate of interest:",b1.getroi());  
+print("SBI Rate of interest:",b2.getroi());  
+print("ICICI Rate of interest:",b3.getroi());  
